@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>자바 스크립트 연습</title>
+    </head>
+    <body>
+        <input type="button" value="클릭하세요" onclick="alert('OK')">
+        
+        <script>
+            var s;
+            s=100;
+            document.write(s+"<br>");
+            document.write(typeof(s)+"<br>");
+            s="홍길동"
+            document.write(s+"<br>");
+            document.write(typeof(s)+"<br>");
+            var c = prompt("이름을 입력하세요");
+            document.write(c+"<br>");
+            var user = confirm("당신의 이름은"+c+"입니다");
+            if(user==true){
+                document.write(user+"확인 버튼을 눌렀습니다.");
+            }else{
+                document.write(user+"취소 버튼을 눌렀습니다.");
+            }
+        </script>
+    </body>
+</html>

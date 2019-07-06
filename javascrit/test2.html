@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Insert title hear</title>
+        <script>
+            function calc(){
+                var x = document.getElementById("x").value;
+                var y = document.getElementById("y").value;
+                sum = parseInt(x)+parseInt(y);
+                document.getElementById("sum").value = sum;
+            }
+            function func(){
+                var e = document.getElementById("test");
+                e.style.color = "red";
+                e.style.backgroundColor = "yellow";
+            }
+        </script>
+    </head>
+    <body>
+        <form name = "myform" method="POST">
+            첫번째 정수 : <input type = "text" id="x" value="100"> <br>
+            두번째 정수 : <input type="text" id="y"><br>
+            합계: <input id="sum"><br>
+            <input type="button" value="계산" onclick="calc()">
+        </form>
+        <h1 id = "test" style="color:blue;background-color:purple;">This is a heading</h1>
+        <button onclick = "func()">클릭!</button>
+    </body>
+</html>
