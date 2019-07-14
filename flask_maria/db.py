@@ -24,7 +24,6 @@ def create_table():
     cn.commit()
     cn.close()
 
-
 def insert_users(user):
     cn = cn_db()
     c = cn.cursor()
@@ -33,7 +32,6 @@ def insert_users(user):
 
     cn.commit()
     cn.close()
-
 
 def all_users():
     cn = cn_db()
@@ -50,7 +48,6 @@ def all_users():
 
     return users
 
-
 def one_user(userid):
     cn = cn_db()
     c = cn.cursor()
@@ -60,5 +57,28 @@ def one_user(userid):
 
     cn.commit()
     cn.close()
-    
+
     return user
+
+def delete_user(userid):
+    cn = cn_db()
+    c = cn.cursor()
+    sql = "delete from users where userid = %s"
+    c.execute(sql,userid)
+
+    cn.commit()
+    cn.close()
+
+def update_user(user):
+    cn = cn_db()
+    c = cn.cursor()
+    sql = '''update users
+            set email = %s,
+            address = %s,
+            password = %s
+            where userid = %s'''
+            
+    c.execute(sql,(user['email'],user['address'],user['password'],user['userid']))
+
+    cn.commit()
+    cn.close()

@@ -1,0 +1,25 @@
+<table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">I.D.</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Address</th>
+            <th scope="col">password</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for user in users %}
+          <tr onclick="location.href='/content/{{user.userid}}'">
+            <th scope="row">1</th>
+            <td>{{user['userid']}}</td>
+            <td>{{user['userid']}}</td>
+            <td>{{user['userid']}}</td>
+            <td>{{user['userid']}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+        <a class="btn btn-primary btn-lg" href="#" role="button">delete</a>
+        <a class="btn btn-primary btn-lg" href="#" role="button">update</a>
+
+      </table>

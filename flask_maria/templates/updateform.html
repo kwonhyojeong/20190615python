@@ -1,0 +1,31 @@
+<div class="container">
+        <form>
+          <form action = '/update' method="POST">
+        <!-- I.D.입력 -->
+          <div class="form-group">
+            <label for="userid">User ID</label>
+            <input type="text" class="form-control" id="userid" name="userid" aria-describedby="useridHelp" value = "{{user.userid}}" readonly>
+            <small id="useridHelp" class="form-text text-muted">We'll never share your I.D. with anyone else.</small>
+          </div>
+        <!-- E-mail -->
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" value = "{{user.email}}">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+        <!-- 주소 -->
+          <div class="form-group">
+            <label for="useraddress">Address</label>
+            <input type="text" class="form-control" id="address" name="address" aria-describedby="addressHelp" value = "{{user.address}}">
+            <small id="addressHelp" class="form-text text-muted">We'll never share your Address with anyone else.</small>
+          </div>
+        <!-- 비번 -->
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="password" name="password" value="{{user.password}}">
+          </div>
+          
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        </form>
+        </div>

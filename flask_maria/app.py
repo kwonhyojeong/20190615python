@@ -26,6 +26,18 @@ def content_user(userid):
     user = db.one_user(userid)
     return render_template('content.html', user = user)
 
+@app.route('/delete/<userid>')
+def delete_user(userid):
+    db.delete_user(userid)
+    return redirect('/list')
+
+@app.route('/update>', methods = ['POST'])
+def update_user():
+    user = request.form.to_dict()
+    print(user)
+    db.update_user(user)
+    return redirect('/list')
+
 if __name__=='__main__':
     app.run(debug=True)
     

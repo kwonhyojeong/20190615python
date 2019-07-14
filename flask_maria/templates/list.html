@@ -1,10 +1,5 @@
 {% extends 'default.html' %}
 
-
-{%block title %}
-사용자 리스트
-{% endblock %}
-
 {% block contens %}
 <table class="table table-hover">
     <thead>
@@ -28,40 +23,4 @@
       {% endfor %}
     </tbody>
   </table>
-{% endblock %}
-
-{% block footer %}
-<!-- card -->
-<div class="container">
-    <div class="card-deck">
-
-            <div class="card">
-              <img src="/static/image/YURAKUCHO.png" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">PLANETARIA TOKYO</h5>
-                <p class="card-text">YURAKUCHO MARION</p>
-                <p class="card-text"><small class="text-muted">DOME1, DOME2, VirtuaLink</small></p>
-              </div>
-            </div>
-
-            <div class="card">
-              <img src="/static/image/SkyTree.png" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">TENKUU</h5>
-                <p class="card-text">TOKYO SkyTreeTOWN</p>
-                <p class="card-text"><small class="text-muted">Starry Land, Hoshi no Tabi, LIVE in Dark</small></p>
-              </div>
-            </div>
-
-            <div class="card">
-              <img src="/static/image/SunShine.png" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">MANTEN</h5>
-                <p class="card-text">IKEBUKURO SunShineCITY</p>
-                <p class="card-text"><small class="text-muted">Hoshizora no miraika, Milky Way & The Moon, Star Safari Africa</small></p>
-              </div>
-            </div>
-
-          </div>
-</div>
 {% endblock %}
